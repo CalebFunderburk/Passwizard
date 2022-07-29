@@ -45,19 +45,40 @@ function generatePassword() {
 
     // If yes, use uppercase letters
     if (confirmUppercase == true) {
-      console.log("User decided to include uppercase characters in their password.")
+      console.log("User decided to include uppercase characters in their password.");
     }
 
-    // If no, then don't
+    // If no, don't
     if (confirmUppercase == false) {
-      console.log("User decided not to include uppercase characters in their password.")
+      console.log("User decided not to include uppercase characters in their password.");
     }
 
-  // Option for numeric characters
-  var confirmNumbers = window.confirm("Would you like to include Numbers?")
+  // Option for numbers
+  var confirmNumbers = window.confirm("Would you like to include Numbers?");
+
+    // If yes, use numbers
+    if (confirmNumbers == true) {
+      console.log("User decided to include numbers in their password.");
+    }
+
+    // If no, don't
+    if (confirmNumbers == false) {
+      console.log("User decided not to include numbers in their password.");
+    }
 
   // Option for special characters
   var confirmSpecial = window.confirm("Would you like to include Special characters?");
+
+    // If yes, use special characters
+    if (confirmSpecial == true) {
+      console.log("User decided to include special characters in their password.");
+    }
+
+    // If no, don't
+    if (confirmSpecial == false) {
+      console.log("User decided not to include special characters in their password.");
+    }
+
 
 //  3. Generate password based off criteria
 
