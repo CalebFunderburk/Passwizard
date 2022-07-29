@@ -11,20 +11,20 @@ function generatePassword() {
     // Password must be 8 characters long
     if (promptLength < 8) {
       window.alert("Your password must be at least 8 characters long.");
-      console.log("User declared invalid parameter.")
+      console.log("User declared invalid parameter.");
       return;
     }
 
     // Password must not be longer than 12 characters long  
     if (promptLength > 128) {
       window.alert("Your password cannot be longer than 128 characters long.");
-      console.log("User declared invalid parameter.")
+      console.log("User declared invalid parameter.");
       return;
     }
 
     // Determine length of password by turning the string declared ny the user into a number
     else {
-      console.log("User decided their password to be " + promptLength + " characters long.")
+      console.log("User decided their password to be " + promptLength + " characters long.");
     }
 
   // Option for lowercase characters  
@@ -79,11 +79,10 @@ function generatePassword() {
       console.log("User decided not to include special characters in their password.");
     }
 
-
 //  3. Generate password based off criteria
 
   // Display the password to the page
-  return
+  return;
 }
 
 // Write password to the #password input
