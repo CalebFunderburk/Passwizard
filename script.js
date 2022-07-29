@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 //Generate a password
 function generatePassword() {
-  console.log("Button working");
+  console.log("Button works");
 
   //  Promt the user for the password criteria
   var promptLength = window.prompt("How many characters would you like your password to be?");
@@ -11,11 +11,20 @@ function generatePassword() {
     // Password must be 8 characters long
     if (promptLength < 8) {
       window.alert("Your password must be at least 8 characters long.");
+      console.log("User chose invalid parameter")
+      return;
     }
 
     // Password must not be longer than 12 characters long  
     if (promptLength > 128) {
       window.alert("Your password cannot be longer than 128 characters long.");
+      console.log("User chose invalid parameter")
+      return;
+    }
+
+    //
+    else {
+      console.log("User chose " + promptLength)
     }
 
   // Option for lowercase characters  
@@ -27,6 +36,9 @@ function generatePassword() {
 
   // Option for uppercase characters
   var confirmUppercase = window.confirm("Would you like to include Uppercase characters?");
+
+  // Option for numeric characters
+  var confirmNumbers = window.confirm("Would you like to include Numbers?")
 
   // Option for special characters
   var confirmSpecial = window.confirm("Would you like to include Special characters?");
