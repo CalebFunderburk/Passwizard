@@ -5,10 +5,15 @@ var generateBtn = document.querySelector("#generate");
 //Generate a password
 function generatePassword() {
   console.log("Button working");
-  var promptLength = window.prompt('How many characters would you like your password to be?')
+  var promptLength = window.prompt('How many characters would you like your password to be?') 
     if (promptLength < 8) {
       window.alert("Your password must be at least 8 characters long.")
     }
+
+    if (promptLength > 128) {
+      window.alert("Your password cannot be longer than 128 characters long.")
+    }
+  
 
 //  1. Promt the user for the password criteria
 //    A.) Password length 8 < 128
