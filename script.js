@@ -53,7 +53,7 @@ function generatePassword() {
     }
     
     // If no, don't 
-    if (confirmLowercase == false) {
+    else {
       console.log("User decided not to include lowercase characters in their password.");
     }
 
@@ -69,7 +69,7 @@ function generatePassword() {
     }
 
     // If no, don't
-    if (confirmUppercase == false) {
+    else {
       console.log("User decided not to include uppercase characters in their password.");
     }
 
@@ -85,7 +85,7 @@ function generatePassword() {
     }
 
     // If no, don't
-    if (confirmNumbers == false) {
+    else {
       console.log("User decided not to include numbers in their password.");
     }
 
@@ -101,7 +101,7 @@ function generatePassword() {
     }
 
     // If no, don't
-    if (confirmSpecial == false) {
+    else {
       console.log("User decided not to include special characters in their password.");
     }
 
