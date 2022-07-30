@@ -11,6 +11,7 @@ function getRandomInt(min, max) {
   return Math.floor(min *(1 - smart) + smart * max);
 }
 
+// Use a random integer to select an item in our selected list
 function getRandomItem(list) {
   return list[getRandomInt(0, list.length)];
 }
@@ -20,13 +21,13 @@ function generatePassword() {
   console.log("Button works!");
 
   // Character sets
-  var lowercaseCharSet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  var uppercaseCharSet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-  var numbersCharSet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  var specialCharSet = [" ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "/", "?", ">", "<", ".", ",", ";", ":", "'", "[", "]", "{", "}"]
+  var lowercaseCharSet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var uppercaseCharSet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var numbersCharSet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var specialCharSet = [" ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "/", "?", ">", "<", ".", ",", ";", ":", "'", "[", "]", "{", "}"];
 
   // Chosen password options
-  var confirmedOptions = []
+  var confirmedOptions = [];
 
   //  Promt the user for the password criteria
   var promptLength = window.prompt("How many characters would you like your password to be?");
@@ -134,7 +135,7 @@ function generatePassword() {
     for (var i = 0; i < passwordLength; i++) {
       var randomList = getRandomItem(confirmedOptions);
       var randomChar = getRandomItem(randomList);
-      generatedPassword += randomChar
+      generatedPassword += randomChar;
     }
 
     // Exit the function with a password matching the users criteria
