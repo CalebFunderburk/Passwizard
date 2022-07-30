@@ -3,11 +3,14 @@ var generateBtn = document.querySelector("#generate");
 
 // Function to generate a random interger
 function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min) * min);
+  if (!max) {
+    max = min;
+    min = 0;
+  }
 }
 
 function getRandomItem(list) {
-  return list(getRandomInt(0, list.length - 1));
+  return list[getRandomInt(0, list.length - 1)];
 }
 
 //Generate a password
@@ -118,7 +121,7 @@ function generatePassword() {
     // Empty string to contain the generated password
     var generatedPassword = ""
 
-    for (var i = 0; 1 < passwordLength; i++) {
+    for (var i = 0; i < passwordLength; i++) {
       var randomList = getRandomItem(confirmedOptions);
       var randomChar = getRandomItem(randomList);
       console.log(randomChar);
@@ -126,7 +129,7 @@ function generatePassword() {
 
 
   // Display the password to the page
-  return;
+
 }
 
 // Write password to the #password input
