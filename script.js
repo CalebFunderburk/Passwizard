@@ -137,11 +137,9 @@ function generatePassword() {
       generatedPassword += randomChar
     }
 
-    console.log(generatedPassword);
-
-
-  // Display the password to the page
-
+    // Exit the function with a password matching the users criteria
+    console.log("User's generated password: " + generatedPassword);
+    return generatedPassword;
 }
 
 // Write password to the #password input
