@@ -5,6 +5,12 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   console.log("Button works!");
 
+  // Character sets
+  var lowercaseCharSet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  var uppercaseCharSet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+  var numbersCharSet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  var specialCharSet = [" ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "/", "?", ">", "<", ".", ",", ";", ":", "'", "[", "]", "{", "}"]
+
   //  Promt the user for the password criteria
   var promptLength = window.prompt("How many characters would you like your password to be?");
 
@@ -108,7 +114,7 @@ function generatePassword() {
 //  3. Generate password based off criteria
 
   // Display the password to the page
-  return;
+  return passwordLength;
 }
 
 // Write password to the #password input
