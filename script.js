@@ -119,15 +119,25 @@ function generatePassword() {
     else {
       console.log("User decided not to include special characters in their password.");
     }
+  
+  // If no confirm window is confirmed, inform the user they must choose 1
+  if (confirmedOptions.length === 0) {
+    window.alert("You must choose at least 1 character set. Please try again.");
+    console.log("User did not choose a character set.");
+    return;
+  }
 
     // Empty string to contain the generated password
-    var generatedPassword = ""
+    var generatedPassword = "";
 
+    // Generate random characters equal to the defined length from the character sets provided
     for (var i = 0; i < passwordLength; i++) {
       var randomList = getRandomItem(confirmedOptions);
       var randomChar = getRandomItem(randomList);
-      console.log(randomChar);
+      generatedPassword += randomChar
     }
+
+    console.log(generatedPassword);
 
 
   // Display the password to the page
