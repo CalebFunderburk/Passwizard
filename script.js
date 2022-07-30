@@ -29,7 +29,7 @@ function generatePassword() {
       return;
     }
 
-    // Determine length of password by turning the string declared by the user into a number
+    // Turn the provided string into a number
     else {
       var passwordLength = parseInt(promptLength);
       console.log("User decided their password to be " + promptLength + " characters long.");
@@ -40,6 +40,9 @@ function generatePassword() {
 
     // If yes, use lowercase letters
     if (confirmLowercase == true) {
+
+      // Call a function to get lowercase characters
+
       console.log("User decided to include lowercase characters in their password.");
     }
     
@@ -53,6 +56,9 @@ function generatePassword() {
 
     // If yes, use uppercase letters
     if (confirmUppercase == true) {
+
+      // Call a function to get uppercase characters
+
       console.log("User decided to include uppercase characters in their password.");
     }
 
@@ -66,6 +72,9 @@ function generatePassword() {
 
     // If yes, use numbers
     if (confirmNumbers == true) {
+
+      // Call a function to get numbers
+
       console.log("User decided to include numbers in their password.");
     }
 
@@ -79,6 +88,9 @@ function generatePassword() {
 
     // If yes, use special characters
     if (confirmSpecial == true) {
+
+      // Call a function to get special characters
+
       console.log("User decided to include special characters in their password.");
     }
 
