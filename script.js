@@ -1,6 +1,11 @@
 // Generate Button
 var generateBtn = document.querySelector("#generate");
 
+// Function to generate a random interger
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min) * min)
+}
+
 //Generate a password
 function generatePassword() {
   console.log("Button works!");
@@ -106,10 +111,16 @@ function generatePassword() {
       console.log("User decided not to include special characters in their password.");
     }
 
-//  3. Generate password based off criteria
+    // Empty string to contain the generated password
+    var generatedPassword = ""
+
+    for (var i = 0; 1 < passwordLength; i++) {
+      Math.random()
+    }
+
 
   // Display the password to the page
-  return passwordLength;
+  return;
 }
 
 // Write password to the #password input
