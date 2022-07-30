@@ -12,7 +12,7 @@ function generatePassword() {
   var specialCharSet = [" ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "/", "?", ">", "<", ".", ",", ";", ":", "'", "[", "]", "{", "}"]
 
   // Chosen password options
-  var chosenOptions = []
+  var confirmedOptions = []
 
   //  Promt the user for the password criteria
   var promptLength = window.prompt("How many characters would you like your password to be?");
@@ -55,9 +55,7 @@ function generatePassword() {
 
     // If yes, use lowercase letters
     if (confirmLowercase == true) {
-
-      // Call a function to get lowercase characters
-
+      confirmedOptions.push(lowercaseCharSet);
       console.log("User decided to include lowercase characters in their password.");
     }
     
@@ -71,9 +69,7 @@ function generatePassword() {
 
     // If yes, use uppercase letters
     if (confirmUppercase == true) {
-
-      // Call a function to get uppercase characters
-
+      confirmedOptions.push(uppercaseCharSet);
       console.log("User decided to include uppercase characters in their password.");
     }
 
@@ -87,9 +83,7 @@ function generatePassword() {
 
     // If yes, use numbers
     if (confirmNumbers == true) {
-
-      // Call a function to get numbers
-
+      confirmedOptions.push(numbersCharSet);
       console.log("User decided to include numbers in their password.");
     }
 
@@ -103,9 +97,7 @@ function generatePassword() {
 
     // If yes, use special characters
     if (confirmSpecial == true) {
-
-      // Call a function to get special characters
-
+      confirmedOptions.push(specialCharSet);
       console.log("User decided to include special characters in their password.");
     }
 
