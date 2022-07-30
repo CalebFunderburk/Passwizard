@@ -7,10 +7,12 @@ function getRandomInt(min, max) {
     max = min;
     min = 0;
   }
+  var smart = Math.random();
+  return Math.floor(min *(1 - smart) + smart * max);
 }
 
 function getRandomItem(list) {
-  return list[getRandomInt(0, list.length - 1)];
+  return list[getRandomInt(0, list.length)];
 }
 
 //Generate a password
@@ -38,21 +40,21 @@ function generatePassword() {
     // Password must be 8 characters long
     if (promptLength < 8) {
       window.alert("Your password must be at least 8 characters long.");
-      console.log("User declared invalid parameter.");
+      console.log("User declared an invalid parameter.");
       return;
     }
 
     // Password must not be longer than 12 characters long  
     if (promptLength > 128) {
       window.alert("Your password cannot be longer than 128 characters long.");
-      console.log("User declared invalid parameter.");
+      console.log("User declared an invalid parameter.");
       return;
     }
 
     // Please provide a numeric value
     if (isNaN(promptLength)) {
       window.alert("Please provide a numeric value.");
-      console.log("User declared invalid parameter.");
+      console.log("User declared an invalid parameter.");
       return;
     }
 
