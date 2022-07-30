@@ -8,6 +8,12 @@ function generatePassword() {
   //  Promt the user for the password criteria
   var promptLength = window.prompt("How many characters would you like your password to be?");
 
+    // If the user presses cancel, back out of the prompt
+    if (promptLength === null) {
+      console.log("User has decided to cancel.");
+      return;
+    }
+
     // Password must be 8 characters long
     if (promptLength < 8) {
       window.alert("Your password must be at least 8 characters long.");
@@ -32,7 +38,7 @@ function generatePassword() {
     // Turn the provided string into a number
     else {
       var passwordLength = parseInt(promptLength);
-      console.log("User decided their password to be " + promptLength + " characters long.");
+      console.log("User decided to make their password " + promptLength + " characters long.");
     }
 
   // Option for lowercase characters  
