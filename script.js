@@ -11,6 +11,9 @@ function generatePassword() {
   var numbersCharSet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   var specialCharSet = [" ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "/", "?", ">", "<", ".", ",", ";", ":", "'", "[", "]", "{", "}"]
 
+  // Chosen password options
+  var chosenOptions = []
+
   //  Promt the user for the password criteria
   var promptLength = window.prompt("How many characters would you like your password to be?");
 
