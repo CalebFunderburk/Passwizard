@@ -22,6 +22,12 @@ function generatePassword() {
       return;
     }
 
+    if (isNaN(promptLength)) {
+      window.alert("Please provide a numeric value.");
+      console.log("User declared invalid parameter.");
+      return;
+    }
+
     // Determine length of password by turning the string declared ny the user into a number
     else {
       console.log("User decided their password to be " + promptLength + " characters long.");
