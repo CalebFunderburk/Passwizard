@@ -1,8 +1,8 @@
-# Tulip
+# Passwizard
 
 ## Website
 
-https://calebfunderburk.github.io/Tulip/
+https://calebfunderburk.github.io/Passwizard/
 
 ## Built With
 
